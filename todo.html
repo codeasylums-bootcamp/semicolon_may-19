@@ -31,6 +31,7 @@
         </div>
         
         <script>
+            var dat = [];
             var alana=0;
             document.getElementById("input").addEventListener("keyup", function(event) {
             event.preventDefault();
@@ -39,16 +40,29 @@
         }
         });
             function a()
-            {
+            { var count=0;
                 var add=document.getElementById('input').value;
                 document.getElementById('input').value='';
-                document.getElementById('un').innerHTML+=`<li><input type="checkbox" onclick="b('${alana}')"> <span id="${alana}">${add}</span> </li>`;
+                for (let index = 0; index < dat.length; index++) {
+                    if(add==`${dat[index]}`)
+                    count++;
+                }
+                if(count==0){
+                    document.getElementById('un').innerHTML+=`<input type="checkbox" onclick="b('${alana}')"> <span id="${alana}">${add}</span><br> `;
+                    dat.push(`${add}`);
                 alana++;
+                }
+                
             }
             function b(alana)
             {
                 var kat=document.getElementById(alana).innerHTML;
                 document.getElementById(alana).innerHTML=`<strike>${kat}</strike>`;
+                for (let index = 0; index < dat.length; index++) {
+                    if(dat[index]===`${kat}`)
+                    dat[index]=-1;
+                    
+                }
                 
             }
         </script>
