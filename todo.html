@@ -1,27 +1,43 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            ToDo List
-        </title>
-    </head>
-    <body background="bg.jpg" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Carter+One|Courgette|Monoton&display=swap" rel="stylesheet">
+    <title style="font-family: 'Carter One', cursive;">SPOJ To-Do</title>
+</head>
+    <body background="ascii.jpg">
         <div style="text-align: center">
-           <h2> To Do list </h2>
+           <h2 style="color:rgb(210, 253, 255);font-family: 'Monoton', cursive; font-size: 70px"> To Do List </h2>
 
         </div>
         <div>
-                <input type="text" placeholder="Write tasks" id="input">
-                <button id="butt" onclick="a()">ADD</button>
+                <!-- <input type="text" placeholder="Write tasks" id="input"> -->
+               <div class="input-group mb-3">
+                    <input type="text" class="form" placeholder="Write the Task" aria-label="Recipient's username" aria-describedby="button-addon2" id="input" style="width:250px;margin-left: 570px;font-family: 'Carter One', cursive;">
+                    <div class="input-group-append">
+                      <button  class="btn btn-light" type="button" id="butt" onclick="a()" style="font-family: 'Carter One', cursive;">Add Discription</button>
+                    </div>
+                  </div>
+                  
+                <!-- <button type="button" class="btn btn-primary" id="butt" onclick="a()">Primary</button>  -->
             </div>  
         <div id="wh">
-            <ul id="un">
+            <ul id="un" style="color: aquamarine; font-family: 'Courgette', cursive; font-size: 25px">
                 
             </ul>
         </div>
         
         <script>
             var alana=0;
+            document.getElementById("input").addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+            document.getElementById("butt").click();
+        }
+        });
             function a()
             {
                 var add=document.getElementById('input').value;
@@ -36,5 +52,8 @@
                 
             }
         </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>
