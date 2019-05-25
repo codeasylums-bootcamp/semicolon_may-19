@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ToDo List
+        </title>
+    </head>
+    <body background="bg.jpg" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">
+        <div style="text-align: center">
+           <h2> To Do list </h2>
+
+        </div>
+        <div>
+                <input type="text" placeholder="Write tasks" id="input">
+                <button id="butt" onclick="a()">ADD</button>
+            </div>  
+        <div id="wh">
+            <ul id="un">
+                
+            </ul>
+        </div>
+        
+        <script>
+            var alana=0;
+            function a()
+            {
+                var add=document.getElementById('input').value;
+                document.getElementById('input').value='';
+                document.getElementById('un').innerHTML+=`<li><input type="checkbox" onclick="b('${alana}')"> <span id="${alana}">${add}</span> </li>`;
+                alana++;
+            }
+            function b(alana)
+            {
+                var kat=document.getElementById(alana).innerHTML;
+                document.getElementById(alana).innerHTML=`<strike>${kat}</strike>`;
+                
+            }
+        </script>
+    </body>
+</html>
