@@ -1,0 +1,16 @@
+#navi {
+    background: grey;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.logo {
+    font-family: 'Fredericka the Great', cursive;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+}
+
+#itxt {
+    font-family: 'Indie Flower', cursive;
+    text-align: center
+}
