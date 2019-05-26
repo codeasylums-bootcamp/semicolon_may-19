@@ -35,7 +35,7 @@ function b(alana) {
 
 var z;
 
-function y() {
+function y(z) {
     var c = document.getElementById('pip');
     var z;
     let flag = 0;
@@ -46,6 +46,7 @@ function y() {
             break;
         }
     }
+    console.log(dat);
     axios.get("http://codeforces.com/api/problemset.problems?tags=implementation")
         .then(function(response) {
             var prb;
@@ -84,7 +85,7 @@ function x(k) {
             console.log(response);
             c.innerHTML = "";
             for (let i = 0; i < 5; i++) {
-                //    console.log(response.data.items[i].id.videoId);
+                console.log(response.data.items[i].id.videoId);
                 c.innerHTML +=
                     `<iframe width = "420" height = "315" src = "https://www.youtube.com/embed/${response.data.items[i].id.videoId}"> < /iframe>`
             }
@@ -94,6 +95,7 @@ function x(k) {
                     break;
                 }
             }
+            console.log(dat[i]);
         })
         .catch(function(error) {
             console.log(error);
