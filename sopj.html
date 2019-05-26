@@ -16,56 +16,15 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <style>
-        #todo
-        { 
-            background-image:url(https://cdn.pixabay.com/photo/2016/04/04/14/12/monitor-1307227_960_720.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-        }
-        .form
-        {
-            background-position: center; 
-        }
-        #itxt
-        {
-            padding-left: 550px;
-        }
-        .refer
-        {
-            color:white;
-        }
-        .problem{
-          color: red;
-        }
-        .problem:hover
-        {
-            color: #007bff!important;
-        }
-        .video
-        {
-            color:pink;
-        }
-        #navi
-        {
-            background-color:black;
-        }
-        .mhn
-        {
-            color:white;
-        }
-    </style>
 
 </head>
 
 <body>
-    
     <section id="nav-var">
         <nav id="navi" class="navbar navbar-expand-lg navbar-light ">
-            <a class="navbar-brand" href="#"><img style=" width: 50px; height: 50px;" src="logo.jpeg"></a>
+            <a class="navbar-brand" href="#"><img style=" width: 130px; height: 130px;" src="logo.png"></a>
             <span id="title"><h1 class="logo">
-                The SPOJ TOOLKIT
+                The Codeforces TOOLKIT
             </h1>
             </span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,52 +33,51 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#"><span class="mhn">PROBLEMS</span> </a>
+                        <a class="nav-link" href="">PROBLEMS </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="mhn">STATUS</span></a>
+                        <a class="nav-link" href="http://codeforces.com/blog/">DISCUSS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="mhn">DISCUSS</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="#"><span class="mhn">CONTESTS</span></a>
+                        <a class="nav-link " href="https://codeforces.com/contests">CONTESTS</a>
                     </li>
                 </ul>
             </div>
         </nav>
-    </section> 
-    <div id="todo" style="text-align: center;">
-        <span class="logo" style="font-size:45px">Your SPOJ To-Do list</span><br>
-        <strong><span class="refer">Refer to the list of <a href="" style="text-decoration: none"> <span class="problem">problems</span></a> before you start</span> </strong>
-        <div id="itxt"  style="text-align:center" class="input-group mb-3">
-            <input type="text" class="form" style="text-align:center" placeholder="Write the Task" aria-label="Recipient's username" aria-describedby="button-addon2" id="input" style="width:250px;margin-left: 570px;font-family: 'Carter One', cursive;">
-            <div class="input-group-append">
-                <button class="btn btn-success" type="button" id="butt" onclick="a()" style="font-family: 'Carter One', cursive;"> Add Task</button>
+    </section>
+    <div class="container">
+        <div style="text-align: center;">
+            <span class="logo" style="font-size:45px">Your CODEFORCES To-Do list</span><br>
+            <strong>Refer to the list of <a href="http://codeforces.com/problemset" style="text-decoration: none, currentColor"> problems</a> before you start </strong>
+            <div id="itxt" style="text-align:center; margin: 0 auto !important;" class="input-group">
+                <div class="text-center" style="display:inline; margin: 0 auto;">
+                    <input type="text" class="form" style="display:inline; text-align:center" placeholder="Write the Task" aria-label="Recipient's username" aria-describedby="button-addon2" id="input" style="width:250px;margin-left: 570px;font-family: 'Carter One', cursive;">
+
+                    <div class="input-group-append">
+                        <button class="btn btn-success" type="button" id="butt" onclick="a()" style="display:inline;float: right; font-family: 'Carter One', cursive;"> Add Task</button>
+                    </div>
+                </div>
             </div>
+
+            <!-- <button type="button" class="btn btn-primary" id="butt" onclick="a()">Primary</button>  -->
         </div>
+        <div id="wh" style="text-align:center">
+            <ul id="un" style="color:white; font-family: 'Kalam', cursive; font-size: 25px">
 
-        <!-- <button type="button" class="btn btn-primary" id="butt" onclick="a()">Primary</button>  -->
-        <div id="pip" style="text-align:center">
-
-            </div>
-            <strong style="text-align: center; font-size: 25px"> <span  class="video">We recommend practicing before you see the tutorial videos</span></strong>
-            <button onclick='x()'>I'm done trying </button>
-        
-    </div>
-    <div id="wh" style="text-align:center">
-        <ul id="un" style="color:white; font-family: 'Kalam', cursive; font-size: 25px">
-
-        </ul>
-    </div>
+            </ul>
+        </div>
     </div>
     </div>
     </div>
 
- 
 
+    <div id="pip" style="text-align:center">
 
-    
+    </div>
+    <strong style="text-align: center; font-size: 25px"> We recommend practicing before you see the tutorial videos</strong>
+    <button onclick='y()'>I'm done trying </button>
+    </div>
+
     <script src="yt.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

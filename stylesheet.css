@@ -14,3 +14,7 @@
     font-family: 'Indie Flower', cursive;
     text-align: center
 }
+
+body {
+    background-image: url('bg.jpg');
+}

@@ -33,14 +33,66 @@ function b(alana) {
     }
 }
 
-function x() {
+var z;
+
+function y() {
     var c = document.getElementById('pip');
-    axios.get("https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + "food" + "&type=video&key=AIzaSyCVg8QjFEyWIls8WTFWbjr-qcLwZoYKDdU")
+    var z;
+    let flag = 0;
+    for (let i = dat.length - 1; i >= 0; --i) {
+        if (dat[i] !== `-1`) {
+            z = dat[i];
+            dat[i] = `-1`;
+            break;
+        }
+    }
+    axios.get("http://codeforces.com/api/problemset.problems?tags=implementation")
+        .then(function(response) {
+            var prb;
+            arr = response.data.result.problems;
+            var k;
+            for (let i = 0; i < arr.length; i++) {
+                if (z === response.data.result.problems[i].name) {
+                    flag = 1;
+                    k = response.data.result.problems[i].tags;
+                }
+            }
+            if (flag === 0)
+                alert("Problem is not in Codeforces");
+            else {
+                x(k);
+            }
+
+        })
+        .catch(function(error) {
+            console.log(error);
+        })
+}
+
+function x(k) {
+    var c = document.getElementById('pip');
+    var abc = "";
+    for (let i = 0; i < k.length; i++) {
+        abc = abc + k[i] + "%2B";
+    }
+    abc = abc.replace(" ", "+");
+    abc = abc + '"%2Bprogramming"';
+    console.log(abc);
+    axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=` + `${abc}` +
+            `&type=video&key=AIzaSyCVg8QjFEyWIls8WTFWbjr-qcLwZoYKDdU `)
         .then(function(response) {
             console.log(response);
+            c.innerHTML = "";
             for (let i = 0; i < 5; i++) {
+                //    console.log(response.data.items[i].id.videoId);
                 c.innerHTML +=
-                    `<iframe width = "420" height = "315" src = "https://www.youtube.com/embed/${response.data.items[i].videoId}"</iframe>`
+                    `<iframe width = "420" height = "315" src = "https://www.youtube.com/embed/${response.data.items[i].id.videoId}"> < /iframe>`
+            }
+            for (let i = dat.length - 1; i >= 0; --i) {
+                if (dat[i] !== `-1`) {
+                    z = dat[i];
+                    break;
+                }
             }
         })
         .catch(function(error) {
